@@ -1,0 +1,306 @@
+/* ********************************* */
+/* ** MongoDB Theme for Bootstrap ** */
+/* ********************************* */
+
+/* Text Colors */
+@defaultText: #271b15;
+@linkText: #006cbc;
+@warningText: #ffb618;
+@successText: #6ca439;
+@errorText: #ed1c24;
+@mutedText: #9b9694;
+@veryMutedText: #b6b3b2;
+@headerAndFooterText: #fff;
+@headerAndFooterMutedText: #95867f;
+@subNavText: #6f6763;
+
+/* Button Background Colors */
+@defaultBtnBG: #ebebed;
+@primaryBtnBG: #6ca439;
+@successBtnBG: #6ca439;
+@warningBtnBG: #ffb618;
+@dangerBtnBG: #ed1c24;
+
+/* Button Text Colors */
+@defaultBtnText: #271b15;
+@primaryBtnText: #fff;
+@successBtnText: #fff;
+@warningBtnText: #fff;
+@dangerBtnText: #fff;
+
+/* Button "Drop Shadow" Colors */
+@defaultBtnShdw: #cdcfd4;
+@primaryBtnShdw: #517b2b;
+@warningBtnShdw: #eaa510;
+@successBtnShdw: #307d24;
+
+/* Element Colors */
+@headerAndFooterBG: #3b291f; // tint of official MongoDB brown
+@subNavBG: #f5f6f7;
+@subNavActiveBG: #6ca439;
+@subNavHoverBG: #ebebed;
+@progressBarFill: #6e7c9f;
+@activeTabBG: #ebebed;
+@chartHeaderBG: #ebebed;
+@tableHeaderBG: #f5f6f7;
+@tableSearchBG: #dee0e3;
+@menuAndModalBG: #fff;
+@modalHeaderBG: #ebebed;
+@progressBarBG: #ebebed;
+
+/* Host Type Label Colors */
+@standaloneBG: #555;
+
+/* Miscellaneous */
+@rowAndTabHoverBG: #f5f6f7;
+@rowError: #ffeaea;
+.navbar .brand {
+  background-size: 77px 27px;
+  padding: 3px;
+  margin: 14px 0;
+  width: 77px;
+  height: 27px;
+  text-shadow: none;
+  text-indent: -9999px;
+}
+
+.navbar-inner {
+  background: @headerAndFooterBG;
+  border: none;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+  filter: none;
+}
+
+.navbar.sub-nav {
+  .navbar-inner {
+    background: @subNavBG;
+    border-top: 5px solid @subNavActiveBG;
+  }
+
+  .nav > li > a {
+    color: @subNavText;
+    font-family: "PT Sans Narrow", "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 15px 10px;
+    text-transform: uppercase;
+  }
+
+  .nav > li > a:focus,
+  .nav > li > a:hover {
+    color: @subNavText;
+    text-decoration: none;
+    background-color: @subNavHoverBG;
+  }
+
+  .nav > .active > a,
+  .nav > .active > a:hover,
+  .nav > .active > a:focus {
+    color: @headerAndFooterText;
+    background-color: @subNavActiveBG;
+  }
+}
+
+.navbar-fixed-top .navbar-inner,
+.navbar-static-top .navbar-inner {
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+
+.navbar .nav > li > a {
+  font-size: 13px;
+  padding: 12px 15px 13px;
+  color: @headerAndFooterText;
+  text-shadow: none;
+}
+
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+  color: @headerAndFooterText;
+  text-decoration: none;
+  background-color: saturate(darken(@headerAndFooterBG, 3%), 5%);
+}
+
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  color: #222;
+  text-decoration: none;
+  background-color: #e6e5e1;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+
+.navbar .nav.secondary {
+  margin: 15px 0 0 0;
+}
+
+.navbar .nav.secondary > li > a {
+  padding: 5px 10px 5px;
+  color: @headerAndFooterText;
+}
+
+.navbar .nav.secondary > li > a:focus,
+.navbar .nav.secondary > li > a:hover {
+  color: @headerAndFooterText;
+  background: transparent;
+}
+
+.navbar .nav > li > a.muted {
+  color: @headerAndFooterMutedText;
+}
+
+.nav-header {
+  color: @veryMutedText;
+}
+.nav-list > li > a,
+.nav-list .nav-header {
+  text-shadow: none;
+}
+
+.nav-list > .active > a,
+.nav-list > .active > a:hover,
+.nav-list > .active > a:focus {
+  color: @defaultText;
+  text-shadow: none;
+  background-color: @activeTabBG;
+}
+
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover,
+.nav-pills > .active > a:focus {
+  color: @defaultText;
+  text-shadow: none;
+  background-color: @activeTabBG;
+}
+
+.nav-tabs {
+  border-bottom: 2px solid @activeTabBG;
+}
+
+.nav-tabs > li {
+  margin-bottom: 0;
+}
+
+.nav-tabs > li > a {
+  border: none;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover,
+.nav-tabs > .active > a:focus {
+  color: @defaultText;
+  cursor: default;
+  background-color: @activeTabBG;
+  border: none;
+}
+
+.nav > li > a {
+  color: @subNavText;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: @rowAndTabHoverBG;
+  color: @subNavText;
+}
+
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+  color: @headerAndFooterText;
+  background: none;
+}
+
+.dropdown-menu {
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  background-color: @menuAndModalBG;
+  border: none;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+  -webkit-box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+     -moz-box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+          box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+}
+
+.nav .dropdown {
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+}
+
+.nav .dropdown:hover,
+.nav .dropdown:focus {
+  background: darken(@headerAndFooterBG, 5%);
+}
+
+.navbar .nav li.dropdown > a:hover .caret,
+.navbar .nav li.dropdown > a:focus .caret {
+  border-top-color: @headerAndFooterText;
+  border-bottom-color: @headerAndFooterText;
+}
+
+.navbar .nav li.dropdown > .dropdown-toggle .caret {
+  border-top-color: @headerAndFooterText;
+  border-bottom-color: @headerAndFooterText;
+}
+
+.navbar .nav li.dropdown.open > .dropdown-toggle .caret,
+.navbar .nav li.dropdown.active > .dropdown-toggle .caret,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
+  border-top-color: @headerAndFooterText;
+  border-bottom-color: @headerAndFooterText;
+}
+
+.navbar .nav > li > .dropdown-menu:before {
+  top: -14px;
+  left: 9px;
+  border-top: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid @headerAndFooterText;
+  border-left: 7px solid transparent;
+  content: '';
+}
+
+.navbar .pull-right > li > .dropdown-menu:before,
+.navbar .nav > li > .dropdown-menu.pull-right:before {
+  right: 7px;
+  left: auto;
+}
+
+.navbar .nav > li > .dropdown-menu:after {
+  display: none;
+}
+
+.navbar-alert.alert {
+  padding: 8px 0;
+  margin-bottom: 0;
+}
+
+.dropdown-menu > li > a {
+  padding: 3px 10px;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-submenu:focus > a {
+  color: @defaultText;
+  text-decoration: none;
+  background: darken(@menuAndModalBG, 10%);
+}
