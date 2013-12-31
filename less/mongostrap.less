@@ -7,8 +7,19 @@
 @darkBrown: #3b291f;
 @brown: #4e3629;
 
-@darkPurple: #373e50;
-@purple: #6e7c9f;
+@purple0: #373e50;
+@purple1: #535d77;
+@purple2: #6e7c9f;
+@purple3: #8b96b2;
+@purple4: #a8b0c5;
+@purple5: #c5cbd9;
+
+@gray0: #313030;
+@gray1: #494747;
+@gray2: #615f5f;
+@gray3: #807f7f;
+@gray4: #a09f9e;
+@gray5: #bfbfbe;
 
 @red: #ed1c24;
 @lightRed: #ffeaea;
@@ -118,26 +129,48 @@ textarea {
   font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-select,
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
-.uneditable-input {
+// select,
+// textarea,
+// input[type="text"],
+// input[type="password"],
+// input[type="datetime"],
+// input[type="datetime-local"],
+// input[type="date"],
+// input[type="month"],
+// input[type="time"],
+// input[type="week"],
+// input[type="number"],
+// input[type="email"],
+// input[type="url"],
+// input[type="search"],
+// input[type="tel"],
+// input[type="color"],
+// .uneditable-input {
+//   color: @defaultText;
+//   border: 1px solid @gray;
+//   background: @veryLightGray;
+//   border-radius: 0;
+// }
+
+.form-control {
   color: @defaultText;
+  border: 1px solid @gray;
+  background: @veryLightGray;
+  border-radius: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
 }
 
+input.form-control,
+textarea.form-control,
+select.form-control {
+  &:focus {
+    border-color: @mongoDBGreen;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(108, 164, 57, 0.6);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(108, 164, 57, 0.6);
+  } 
+}
 .text-warning {
   color: @warningText;
 }
@@ -229,6 +262,11 @@ a.text-success:focus {
   border-bottom: 1px solid darken(@mongoDBGreen, 20%);
 }
 
+.open .dropdown-toggle.btn-primary {
+  background: saturate(darken(@mongoDBGreen, 15%), 15%);
+  border-bottom: 1px solid darken(@mongoDBGreen, 20%);
+}
+
 .btn-white {
   background: @veryLightGray;
   border-bottom: 1px solid @whiteBtnShdw;
@@ -291,89 +329,27 @@ a.text-success:focus {
   font-size: 13px;
 }
 
-.navbar-brand {
-  background: url("/static/images/logo-mms-white-landing.png") center center no-repeat;
-  background-size: 56px 20px;
-  margin: 5px 0 0 10px;
-  width: 56px;
-  height: 20px;
-  text-indent: -9999px;
-  // opacity: 0.3
-}
-
-.navbar .brand-admin{
-  color: #fff;
-  margin: 11px 0 0 15px;
-  float: left;
-}
-
-footer .brand {
-  display: block;
-  background: url("/static/images/mongodb-logo.png") center center no-repeat;
-  background-size: 133px 38px;
-  padding: 5px;
-  width: 133px;
-  height: 38px;
-  text-indent: -9999px;
-  -webkit-transition: opacity 0.3s linear;
-     -moz-transition: opacity 0.3s linear;
-       -o-transition: opacity 0.3s linear;
-          transition: opacity 0.3s linear;
-
-  &:hover {
-    background: url("/static/images/mongodb-logo-hover.png") center center no-repeat;
-    background-size: 133px 38px;
-  }
-}
-
 .navbar-inverse {
   background: @darkBrown;
-  min-height: 40px;
   border: none;
 }
 
-.navbar-fixed-top .navbar-inner,
-.navbar-static-top .navbar-inner {
-  -webkit-box-shadow: none;
-     -moz-box-shadow: none;
-          box-shadow: none;
-}
-
-.navbar .nav > li > a {
-  font-size: 13px;
-  padding: 12px 15px 13px;
+.navbar-inverse .nav > li > a {
   color: @headerAndFooterText;
 }
 
-.navbar .nav > li > a:focus,
-.navbar .nav > li > a:hover {
+.navbar-inverse .nav > li > a:focus,
+.navbar-inverse .nav > li > a:hover {
   color: @headerAndFooterText;
   text-decoration: none;
   background-color: saturate(darken(@darkBrown, 3%), 5%);
 }
 
-@media (min-width: 768px) {
-  .navbar-collapse .navbar-nav.navbar-right.secondary {
-    margin: 6px 0 0 0;
-  }
-}
-
-.navbar .nav.secondary > li > a {
-  padding: 5px 10px 5px;
-  color: @headerAndFooterText;
-}
-
-.navbar .nav.secondary > li > a:focus,
-.navbar .nav.secondary > li > a:hover {
-  color: @headerAndFooterText;
-  background: transparent;
-}
-
-.navbar .nav > li > a.muted {
+.navbar-inverse .nav > li > a.muted {
   color: @headerAndFooterMutedText;
 }
 
-.nav-header {
+.navbar-inverse .nav-header {
   color: @mutedText;
   font-size: 10px;
   text-transform: uppercase;
@@ -403,7 +379,7 @@ footer .brand {
 
 .progress .bar {
   height: 100%;
-  background: @purple;
+  background: @purple1;
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
           box-shadow: none;
@@ -633,8 +609,12 @@ footer .brand {
 // }
 
 .navbar-alert.alert {
-  padding: 8px 0;
+  padding: 8px 15px;
   margin-bottom: 0;
+  border-radius: 0;
+  i[class^="icon-"] {
+    margin-right: 0.5ex;
+  }
 }
 
 .dropdown-menu > li > a {
@@ -665,6 +645,20 @@ footer .brand {
 
 .well-small {
   border-radius: 0;
+}
+
+/* Custom .form-inverse class - not native to bootstrap */
+.form-inverse {
+  background: @gray1;
+  color: @pw;
+
+  .form-control {
+    color: @pw;
+    border: 1px solid @gray0;
+    background: @gray2;
+    // box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+    // -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+  }
 }
 
 .label {
@@ -703,7 +697,8 @@ footer .brand {
   background: @mongoDBGreen;
 }
 
-.host-label-secondary {
+.host-label-secondary,
+.host-label-arbiter {
   background: desaturate(lighten(@mongoDBGreen, 35%), 10%);
 }
 
@@ -881,33 +876,6 @@ footer .brand {
   z-index: 1060;
 }
 
-/* Large desktop */
-@media (min-width: 1200px) {
-    .navbar .nav > li > a {
-      font-size: 14px;
-    }
-}
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {
-    
-}
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
-
-}
- 
-/* Landscape phones and down */
-@media (max-width: 480px) {
-
-}
-
-/* jQueryUI Overrides
-     - Ensure slider handler is not visible through date picker dialog
-*/
-.ui-slider .ui-slider-handle {
-  z-index: 1;
-}
-
 /* ============================================================
  * bootstrapSwitch v1.3 by Larentis Mattia @spiritualGuru
  * http://www.larentis.eu/switch/
@@ -975,7 +943,7 @@ footer .brand {
   &.deactivate {
     .opacity(.5);
     cursor: default !important;
-    
+
     label,
     span {
       cursor: default !important;
@@ -1082,7 +1050,7 @@ footer .brand {
   span {
     &.switch-left {
       border-radius: @border-radius-large 0 0 @border-radius-large;
-      
+
       [class*="fui-"] {
         text-indent: -10px;
       }
@@ -1090,7 +1058,7 @@ footer .brand {
 
     &.switch-right {
       border-radius: 0 @border-radius-large @border-radius-large 0;
-      
+
       [class*="fui-"] {
         text-indent: 5px;
       }

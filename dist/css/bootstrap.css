@@ -7154,24 +7154,22 @@ textarea {
   font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-select,
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
-.uneditable-input {
+.form-control {
   color: #271b15;
+  background: #f5f6f7;
+  border: 1px solid #dee0e3;
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+input.form-control:focus,
+textarea.form-control:focus,
+select.form-control:focus {
+  border-color: #6ca439;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(108, 164, 57, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(108, 164, 57, 0.6);
 }
 
 .text-warning {
@@ -7265,6 +7263,11 @@ a.text-success:focus {
   border-bottom: 1px solid #3a581f;
 }
 
+.open .dropdown-toggle.btn-primary {
+  background: #46761a;
+  border-bottom: 1px solid #3a581f;
+}
+
 .btn-white {
   background: #f5f6f7;
   border-bottom: 1px solid #d2d4d8;
@@ -7327,88 +7330,27 @@ a.text-success:focus {
   font-size: 13px;
 }
 
-.navbar-brand {
-  width: 56px;
-  height: 20px;
-  margin: 5px 0 0 10px;
-  text-indent: -9999px;
-  background: url("/static/images/logo-mms-white-landing.png") center center no-repeat;
-  background-size: 56px 20px;
-}
-
-.navbar .brand-admin {
-  float: left;
-  margin: 11px 0 0 15px;
-  color: #fff;
-}
-
-footer .brand {
-  display: block;
-  width: 133px;
-  height: 38px;
-  padding: 5px;
-  text-indent: -9999px;
-  background: url("/static/images/mongodb-logo.png") center center no-repeat;
-  background-size: 133px 38px;
-  -webkit-transition: opacity 0.3s linear;
-     -moz-transition: opacity 0.3s linear;
-       -o-transition: opacity 0.3s linear;
-          transition: opacity 0.3s linear;
-}
-
-footer .brand:hover {
-  background: url("/static/images/mongodb-logo-hover.png") center center no-repeat;
-  background-size: 133px 38px;
-}
-
 .navbar-inverse {
-  min-height: 40px;
   background: #3b291f;
   border: none;
 }
 
-.navbar-fixed-top .navbar-inner,
-.navbar-static-top .navbar-inner {
-  -webkit-box-shadow: none;
-     -moz-box-shadow: none;
-          box-shadow: none;
-}
-
-.navbar .nav > li > a {
-  padding: 12px 15px 13px;
-  font-size: 13px;
+.navbar-inverse .nav > li > a {
   color: #ffffff;
 }
 
-.navbar .nav > li > a:focus,
-.navbar .nav > li > a:hover {
+.navbar-inverse .nav > li > a:focus,
+.navbar-inverse .nav > li > a:hover {
   color: #ffffff;
   text-decoration: none;
   background-color: #332118;
 }
 
-@media (min-width: 768px) {
-  .navbar-collapse .navbar-nav.navbar-right.secondary {
-    margin: 6px 0 0 0;
-  }
-}
-
-.navbar .nav.secondary > li > a {
-  padding: 5px 10px 5px;
-  color: #ffffff;
-}
-
-.navbar .nav.secondary > li > a:focus,
-.navbar .nav.secondary > li > a:hover {
-  color: #ffffff;
-  background: transparent;
-}
-
-.navbar .nav > li > a.muted {
+.navbar-inverse .nav > li > a.muted {
   color: #95867f;
 }
 
-.nav-header {
+.navbar-inverse .nav-header {
   font-size: 10px;
   color: #9b9694;
   text-transform: uppercase;
@@ -7438,7 +7380,7 @@ footer .brand:hover {
 
 .progress .bar {
   height: 100%;
-  background: #6e7c9f;
+  background: #535d77;
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
           box-shadow: none;
@@ -7634,8 +7576,13 @@ footer .brand:hover {
 }
 
 .navbar-alert.alert {
-  padding: 8px 0;
+  padding: 8px 15px;
   margin-bottom: 0;
+  border-radius: 0;
+}
+
+.navbar-alert.alert i[class^="icon-"] {
+  margin-right: 0.5ex;
 }
 
 .dropdown-menu > li > a {
@@ -7666,6 +7613,19 @@ footer .brand:hover {
 
 .well-small {
   border-radius: 0;
+}
+
+/* Custom .form-inverse class - not native to bootstrap */
+
+.form-inverse {
+  color: #ffffff;
+  background: #494747;
+}
+
+.form-inverse .form-control {
+  color: #ffffff;
+  background: #615f5f;
+  border: 1px solid #313030;
 }
 
 .label {
@@ -7704,7 +7664,8 @@ footer .brand:hover {
   background: #6ca439;
 }
 
-.host-label-secondary {
+.host-label-secondary,
+.host-label-arbiter {
   background: #c7ddb3;
 }
 
@@ -7882,40 +7843,6 @@ footer .brand:hover {
 
 .ui-autocomplete {
   z-index: 1060;
-}
-
-/* Large desktop */
-
-@media (min-width: 1200px) {
-  .navbar .nav > li > a {
-    font-size: 14px;
-  }
-}
-
-/* Portrait tablet to landscape and desktop */
-
-@media (min-width: 768px) and (max-width: 979px) {
-  
-}
-
-/* Landscape phone to portrait tablet */
-
-@media (max-width: 767px) {
-  
-}
-
-/* Landscape phones and down */
-
-@media (max-width: 480px) {
-  
-}
-
-/* jQueryUI Overrides
-     - Ensure slider handler is not visible through date picker dialog
-*/
-
-.ui-slider .ui-slider-handle {
-  z-index: 1;
 }
 
 /* ============================================================
