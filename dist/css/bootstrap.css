@@ -1,6 +1,6 @@
 /*!
  * Bootstrap v3.0.0 by @fat and @mdo
- * Copyright 2013 Twitter, Inc.
+ * Copyright 2014 Twitter, Inc.
  * Licensed under http://www.apache.org/licenses/LICENSE-2.0
  *
  * Designed and built with all the love in the world by @mdo and @fat.
@@ -7067,13 +7067,15 @@ td.visible-print {
 
 /* ********************************* */
 
-/* Background Colors */
+/* MongoDB Color Palette */
+
+/* UI Grays */
+
+/* Other Colors */
 
 /* Text Colors */
 
-/* Button Text Colors */
-
-/* Button "Drop Shadow" Colors */
+/* default text color is @brown0 */
 
 /* Fonts! */
 
@@ -7166,7 +7168,7 @@ textarea {
 input.form-control:focus,
 textarea.form-control:focus,
 select.form-control:focus {
-  border-color: #6ca439;
+  border-color: #6ba442;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(108, 164, 57, 0.6);
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(108, 164, 57, 0.6);
@@ -7242,8 +7244,8 @@ a.text-success:focus {
 .btn-primary,
 .btn-success {
   color: #fff;
-  background: #6ca439;
-  border-bottom: 1px solid #609132;
+  background: #6ba442;
+  border-bottom: 1px solid #5f923b;
 }
 
 .btn-primary:hover,
@@ -7251,38 +7253,38 @@ a.text-success:focus {
 .btn-primary:focus,
 .btn-success:focus {
   color: #fff;
-  background: #5f962e;
-  border-bottom: 1px solid #537e2c;
+  background: #5e9736;
+  border-bottom: 1px solid #538033;
 }
 
 .btn-primary:active,
 .btn-success:active,
 .btn-primary.active,
 .btn-success.active {
-  background: #46761a;
-  border-bottom: 1px solid #3a581f;
+  background: #467921;
+  border-bottom: 1px solid #3c5b25;
 }
 
 .open .dropdown-toggle.btn-primary {
-  background: #46761a;
-  border-bottom: 1px solid #3a581f;
+  background: #467921;
+  border-bottom: 1px solid #3c5b25;
 }
 
 .btn-white {
   background: #f5f6f7;
-  border-bottom: 1px solid #d2d4d8;
+  border-bottom: 1px solid #dee0e3;
 }
 
 .btn-white:hover,
 .btn-white:focus {
   background: #eff1f3;
-  border-bottom: 1px solid #cdcfd3;
+  border-bottom: 1px solid #d8dbde;
 }
 
 .btn-white:active,
 .btn-white.active {
   background: #cad0d6;
-  border-bottom: 1px solid #a9adb4;
+  border-bottom: 1px solid #b5b9c0;
 }
 
 .btn-block {
@@ -7323,7 +7325,7 @@ a.text-success:focus {
 
 .btn.btn-primary.disabled,
 .btn.btn-primary[disabled] {
-  background: #6ca439;
+  background: #6ba442;
 }
 
 .btn-small {
@@ -7493,7 +7495,7 @@ a.text-success:focus {
 
 .table th,
 .table td {
-  border-top: 1px solid #f2f2f2;
+  border-top: 1px solid #f5f6f7;
 }
 
 .table thead > tr > th,
@@ -7502,7 +7504,7 @@ a.text-success:focus {
 .table thead > tr > td,
 .table tbody > tr > td,
 .table tfoot > tr > td {
-  border-top: 1px solid #f2f2f2;
+  border-top: 1px solid #f5f6f7;
 }
 
 .table thead > tr > th {
@@ -7637,12 +7639,12 @@ a.text-success:focus {
 
 .label-success,
 .badge-success {
-  background-color: #6ca439;
+  background-color: #6ba442;
 }
 
 .label-success[href],
 .badge-success[href] {
-  background-color: #6ca439;
+  background-color: #6ba442;
 }
 
 .label-warning,
@@ -7657,16 +7659,16 @@ a.text-success:focus {
 
 .label-info,
 .badge-info {
-  background-color: #6ca439;
+  background-color: #6ba442;
 }
 
 .host-label-primary {
-  background: #6ca439;
+  background: #6ba442;
 }
 
 .host-label-secondary,
 .host-label-arbiter {
-  background: #c7ddb3;
+  background: #caddbc;
 }
 
 .host-label-recovering,
@@ -7681,19 +7683,19 @@ a.text-success:focus {
 }
 
 .host-label-standalone {
-  background: #555555;
+  background: #494747;
 }
 
 .host-label-mongos,
 .host-label-conf {
-  background: #c7ddb3;
+  background: #caddbc;
 }
 
 .host-label-unknown,
 .host-label-no-data,
 .host-label-shunned,
 .host-label-removed {
-  background: #d4d4d4;
+  background: #c8c7c7;
 }
 
 .label-no-bg {
@@ -7832,12 +7834,6 @@ a.text-success:focus {
   white-space: pre-wrap;
   border-radius: 0;
 }
-
-/* ***************************** */
-
-/* ****** jQuery UI Styles ***** */
-
-/* ***************************** */
 
 /* make the autocomplete rise above the navbar and any modal */
 

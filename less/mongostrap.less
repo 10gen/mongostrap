@@ -3,16 +3,20 @@
 /* ********************************* */
 
 
-/* Background Colors */
-@darkBrown: #3b291f;
-@brown: #4e3629;
+/* MongoDB Color Palette */
+@brown0: #271b15;
+@brown1: #3b291f;
+@brown2: #4e3629;
+@brown3: #715e54;
+@brown4: #95867f;
+@brown5: #b8afa9;
 
-@purple0: #373e50;
-@purple1: #535d77;
-@purple2: #6e7c9f;
-@purple3: #8b96b2;
-@purple4: #a8b0c5;
-@purple5: #c5cbd9;
+@green0: #365221;
+@green1: #507b32;
+@green2: #6ba442;
+@green3: #89b668;
+@green4: #a6c88e;
+@green5: #c4dbb3;
 
 @gray0: #313030;
 @gray1: #494747;
@@ -21,44 +25,47 @@
 @gray4: #a09f9e;
 @gray5: #bfbfbe;
 
+/* UI Grays */
+@gray6: #dee0e3;
+@gray7: #ebebed;
+@gray8: #f5f6f7;
+
+@blue0: #19314a;
+@blue1: #264a6f;
+@blue2: #326294;
+@blue3: #5b81a9;
+@blue4: #84a1bf;
+@blue5: #adc0d4;
+
+@purple0: #373e50;
+@purple1: #535d77;
+@purple2: #6e7c9f;
+@purple3: #8b96b2;
+@purple4: #a8b0c5;
+@purple5: #c5cbd9;
+
+@orange0: #702a13;
+@orange1: #a83f1d;
+@orange2: #e05426;
+@orange3: #e67651;
+@orange4: #ec987d;
+@orange5: #f3bba8;
+
+/* Other Colors */
 @red: #ed1c24;
 @lightRed: #ffeaea;
 @yellow: #ffb618;
-@mongoDBGreen: #6ca439;
-@veryLightGreen: #c4dbb3;
-
-@mediumGray: #555;
-@gray: #dee0e3;
-@lightGray: #ebebed;
-@otherLightGray: #f2f2f2;
-@veryLightGray: #f5f6f7;
-
 @pw: #fff;
 
-
 /* Text Colors */
-@defaultText: #271b15;
+/* default text color is @brown0 */
 @linkText: #006cbc;
 @warningText: #ffb618;
 @successText: #6ca439;
 @errorText: #ed1c24;
 @mutedText: #9b9694;
 @veryMutedText: #b6b3b2;
-@headerAndFooterText: #fff;
-@headerAndFooterMutedText: #95867f;
 @subNavText: #6f6763;
-
-/* Button Text Colors */
-@defaultBtnText: #271b15;
-@primaryBtnText: #fff;
-@successBtnText: #fff;
-@warningBtnText: #fff;
-@dangerBtnText: #fff;
-
-/* Button "Drop Shadow" Colors */
-@successBtnShdw: #307d24;
-@whiteBtnShdw: #d2d4d8;
-
 
 /* Fonts! */
 @font-face {
@@ -89,7 +96,7 @@
 html, body {
   height: 100%;
   font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: @defaultText;
+  color: @brown0;
 }
 
 h1,
@@ -129,33 +136,10 @@ textarea {
   font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-// select,
-// textarea,
-// input[type="text"],
-// input[type="password"],
-// input[type="datetime"],
-// input[type="datetime-local"],
-// input[type="date"],
-// input[type="month"],
-// input[type="time"],
-// input[type="week"],
-// input[type="number"],
-// input[type="email"],
-// input[type="url"],
-// input[type="search"],
-// input[type="tel"],
-// input[type="color"],
-// .uneditable-input {
-//   color: @defaultText;
-//   border: 1px solid @gray;
-//   background: @veryLightGray;
-//   border-radius: 0;
-// }
-
 .form-control {
-  color: @defaultText;
-  border: 1px solid @gray;
-  background: @veryLightGray;
+  color: @brown0;
+  border: 1px solid @gray6;
+  background: @gray8;
   border-radius: 0;
   box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
@@ -165,7 +149,7 @@ input.form-control,
 textarea.form-control,
 select.form-control {
   &:focus {
-    border-color: @mongoDBGreen;
+    border-color: @green2;
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(108, 164, 57, 0.6);
             box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(108, 164, 57, 0.6);
@@ -199,10 +183,10 @@ a.text-success:focus {
 }
 
 .btn {
-  color: @defaultBtnText;
-  background: @lightGray;
+  color: @brown0;
+  background: @gray7;
   border: none;
-  border-bottom: 1px solid darken(@lightGray, 10%);
+  border-bottom: 1px solid darken(@gray7, 10%);
   border-radius: 2px;
   *zoom: 1;
   -webkit-box-shadow: none;
@@ -212,9 +196,9 @@ a.text-success:focus {
 
 .btn:hover,
 .btn:focus {
-  color: @defaultBtnText;
-  background: darken(@lightGray, 5%);
-  border-bottom: 1px solid darken(@lightGray, 15%);
+  color: @brown0;
+  background: darken(@gray7, 5%);
+  border-bottom: 1px solid darken(@gray7, 15%);
   -webkit-transition: background 0.1s linear;
      -moz-transition: background 0.1s linear;
        -o-transition: background 0.1s linear;
@@ -223,7 +207,7 @@ a.text-success:focus {
 
 .btn.active,
 .btn:active {
-  background: darken(@lightGray, 15%);
+  background: darken(@gray7, 15%);
   outline: 0;
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
@@ -235,14 +219,14 @@ a.text-success:focus {
 }
 
 .btn.active {
-  border-bottom: 1px solid darken(@lightGray, 25%);
+  border-bottom: 1px solid darken(@gray7, 25%);
 }
 
 .btn-primary,
 .btn-success {
   color: #fff;
-  background: @mongoDBGreen;
-  border-bottom: 1px solid darken(@mongoDBGreen, 5%);
+  background: @green2;
+  border-bottom: 1px solid darken(@green2, 5%);
 }
 
 .btn-primary:hover,
@@ -250,38 +234,38 @@ a.text-success:focus {
 .btn-primary:focus,
 .btn-success:focus {
   color: #fff;
-  background: saturate(darken(@mongoDBGreen, 5%), 5%);
-  border-bottom: 1px solid darken(@mongoDBGreen, 10%);
+  background: saturate(darken(@green2, 5%), 5%);
+  border-bottom: 1px solid darken(@green2, 10%);
 }
 
 .btn-primary:active,
 .btn-success:active,
 .btn-primary.active,
 .btn-success.active {
-  background: saturate(darken(@mongoDBGreen, 15%), 15%);
-  border-bottom: 1px solid darken(@mongoDBGreen, 20%);
+  background: saturate(darken(@green2, 15%), 15%);
+  border-bottom: 1px solid darken(@green2, 20%);
 }
 
 .open .dropdown-toggle.btn-primary {
-  background: saturate(darken(@mongoDBGreen, 15%), 15%);
-  border-bottom: 1px solid darken(@mongoDBGreen, 20%);
+  background: saturate(darken(@green2, 15%), 15%);
+  border-bottom: 1px solid darken(@green2, 20%);
 }
 
 .btn-white {
-  background: @veryLightGray;
-  border-bottom: 1px solid @whiteBtnShdw;
+  background: @gray8;
+  border-bottom: 1px solid @gray6;
 }
 
 .btn-white:hover,
 .btn-white:focus {
-  background: saturate(darken(@veryLightGray, 2%), 1%);
-  border-bottom: 1px solid darken(@whiteBtnShdw, 2%);
+  background: saturate(darken(@gray8, 2%), 1%);
+  border-bottom: 1px solid darken(@gray6, 2%);
 }
 
 .btn-white:active,
 .btn-white.active {
-  background: saturate(darken(@veryLightGray, 15%), 2%);
-  border-bottom: 1px solid darken(@whiteBtnShdw, 15%);
+  background: saturate(darken(@gray8, 15%), 2%);
+  border-bottom: 1px solid darken(@gray6, 15%);
 }
 
 .btn-block {
@@ -314,7 +298,7 @@ a.text-success:focus {
 
 .btn.disabled,
 .btn[disabled] {
-  background: @lightGray;
+  background: @gray7;
   opacity: 0.4;
   filter: alpha(opacity=40);
   border: none;
@@ -322,7 +306,7 @@ a.text-success:focus {
 
 .btn.btn-primary.disabled,
 .btn.btn-primary[disabled] {
-  background: @mongoDBGreen;
+  background: @green2;
 }
 
 .btn-small {
@@ -330,23 +314,23 @@ a.text-success:focus {
 }
 
 .navbar-inverse {
-  background: @darkBrown;
+  background: @brown1;
   border: none;
 }
 
 .navbar-inverse .nav > li > a {
-  color: @headerAndFooterText;
+  color: @pw;
 }
 
 .navbar-inverse .nav > li > a:focus,
 .navbar-inverse .nav > li > a:hover {
-  color: @headerAndFooterText;
+  color: @pw;
   text-decoration: none;
-  background-color: saturate(darken(@darkBrown, 3%), 5%);
+  background-color: saturate(darken(@brown1, 3%), 5%);
 }
 
 .navbar-inverse .nav > li > a.muted {
-  color: @headerAndFooterMutedText;
+  color: @brown4;
 }
 
 .navbar-inverse .nav-header {
@@ -358,19 +342,19 @@ a.text-success:focus {
 .nav-list > .active > a,
 .nav-list > .active > a:hover,
 .nav-list > .active > a:focus {
-  color: @defaultText;
-  background-color: @lightGray;
+  color: @brown0;
+  background-color: @gray7;
 }
 
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  color: @defaultText;
-  background-color: @lightGray;
+  color: @brown0;
+  background-color: @gray7;
 }
 
 .progress {
-  background: @lightGray;
+  background: @gray7;
   border-radius: 0;
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
@@ -439,7 +423,7 @@ a.text-success:focus {
 
 .input-append .add-on.add-on-plain.dark,
 .input-prepend .add-on.add-on-plain.dark {
-  color: @defaultText;
+  color: @brown0;
 }
 
 .btn-group > .btn + .btn {
@@ -486,11 +470,11 @@ a.text-success:focus {
 
 .table-hover tbody tr:hover > td,
 .table-hover tbody tr:hover > th {
-  background-color: @veryLightGray;
+  background-color: @gray8;
 }
 
 .table th, .table td {
-  border-top: 1px solid @otherLightGray;
+  border-top: 1px solid @gray8;
 }
 
 .table thead > tr > th,
@@ -499,7 +483,7 @@ a.text-success:focus {
 .table thead > tr > td,
 .table tbody > tr > td,
 .table tfoot > tr > td {
-  border-top: 1px solid @otherLightGray;
+  border-top: 1px solid @gray8;
 }
 
 .table thead > tr > th {
@@ -507,7 +491,7 @@ a.text-success:focus {
 }
 
 .nav-tabs {
-  border-bottom: 2px solid @lightGray;
+  border-bottom: 2px solid @gray7;
 }
 
 .nav-tabs > li {
@@ -522,9 +506,9 @@ a.text-success:focus {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: @defaultText;
+  color: @brown0;
   cursor: default;
-  background-color: @lightGray;
+  background-color: @gray7;
   border: none;
 }
 
@@ -534,14 +518,14 @@ a.text-success:focus {
 
 .nav > li > a:hover,
 .nav > li > a:focus {
-  background-color: @veryLightGray;
+  background-color: @gray8;
   color: @subNavText;
 }
 
 .navbar .nav li.dropdown.open > .dropdown-toggle,
 .navbar .nav li.dropdown.active > .dropdown-toggle,
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
-  color: @headerAndFooterText;
+  color: @pw;
   background: none;
 }
 
@@ -567,25 +551,25 @@ a.text-success:focus {
 
 .nav .dropdown:hover,
 .nav .dropdown:focus {
-  background: darken(@darkBrown, 5%);
+  background: darken(@brown1, 5%);
 }
 
 .navbar .nav li.dropdown > a:hover .caret,
 .navbar .nav li.dropdown > a:focus .caret {
-  border-top-color: @headerAndFooterText;
-  border-bottom-color: @headerAndFooterText;
+  border-top-color: @pw;
+  border-bottom-color: @pw;
 }
 
 .navbar .nav li.dropdown > .dropdown-toggle .caret {
-  border-top-color: @headerAndFooterText;
-  border-bottom-color: @headerAndFooterText;
+  border-top-color: @pw;
+  border-bottom-color: @pw;
 }
 
 .navbar .nav li.dropdown.open > .dropdown-toggle .caret,
 .navbar .nav li.dropdown.active > .dropdown-toggle .caret,
 .navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
-  border-top-color: @headerAndFooterText;
-  border-bottom-color: @headerAndFooterText;
+  border-top-color: @pw;
+  border-bottom-color: @pw;
 }
 
 // .navbar .nav > li > .dropdown-menu:before {
@@ -593,7 +577,7 @@ a.text-success:focus {
 //   left: 9px;
 //   border-top: 7px solid transparent;
 //   border-right: 7px solid transparent;
-//   border-bottom: 7px solid @headerAndFooterText;
+//   border-bottom: 7px solid @pw;
 //   border-left: 7px solid transparent;
 //   content: '';
 // }
@@ -625,14 +609,14 @@ a.text-success:focus {
 .dropdown-menu > li > a:focus,
 .dropdown-submenu:hover > a,
 .dropdown-submenu:focus > a {
-  color: @defaultText;
+  color: @brown0;
   text-decoration: none;
   background: darken(@pw, 10%);
 }
 
 .well {
-  background-color: @veryLightGray;
-  border: 1px solid darken(@veryLightGray, 5%);
+  background-color: @gray8;
+  border: 1px solid darken(@gray8, 5%);
   border-radius: 0;
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
@@ -670,12 +654,12 @@ a.text-success:focus {
 
 .label-success,
 .badge-success {
-  background-color: @mongoDBGreen;
+  background-color: @green2;
 }
 
 .label-success[href],
 .badge-success[href] {
-  background-color: @mongoDBGreen;
+  background-color: @green2;
 }
 
 .label-warning,
@@ -690,16 +674,16 @@ a.text-success:focus {
 
 .label-info,
 .badge-info {
-  background-color: @mongoDBGreen;
+  background-color: @green2;
 }
 
 .host-label-primary {
-  background: @mongoDBGreen;
+  background: @green2;
 }
 
 .host-label-secondary,
 .host-label-arbiter {
-  background: desaturate(lighten(@mongoDBGreen, 35%), 10%);
+  background: desaturate(lighten(@green2, 35%), 10%);
 }
 
 .host-label-recovering,
@@ -714,19 +698,19 @@ a.text-success:focus {
 }
 
 .host-label-standalone {
-  background: @mediumGray;
+  background: @gray1;
 }
 
 .host-label-mongos,
 .host-label-conf {
-  background: desaturate(lighten(@mongoDBGreen, 35%), 10%);
+  background: desaturate(lighten(@green2, 35%), 10%);
 }
 
 .host-label-unknown,
 .host-label-no-data,
 .host-label-shunned,
 .host-label-removed {
-  background: lighten(@mediumGray, 50%);
+  background: lighten(@gray1, 50%);
 }
 
 .label-no-bg {
@@ -786,7 +770,7 @@ a.text-success:focus {
 }
 
 .modal-header {
-  background: @lightGray;
+  background: @gray7;
   border-bottom: none;
 }
 
@@ -797,7 +781,7 @@ a.text-success:focus {
 
 .modal-header .close {
   font-size: 24px;
-  color: @defaultText;
+  color: @brown0;
   opacity: 0.4;
   filter: alpha(opacity=40);
 }
@@ -809,7 +793,7 @@ a.text-success:focus {
 }
 
 .modal-footer {
-  background-color: @lightGray;
+  background-color: @gray7;
   border-top: none;
   border-radius: 0;
   -webkit-box-shadow: none;
@@ -865,11 +849,6 @@ a.text-success:focus {
   white-space: pre-wrap;
   max-width: 400px;
 }
-
-
-/* ***************************** */
-/* ****** jQuery UI Styles ***** */
-/* ***************************** */
 
 /* make the autocomplete rise above the navbar and any modal */
 .ui-autocomplete {
