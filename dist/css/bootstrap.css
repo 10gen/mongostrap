@@ -7553,9 +7553,9 @@ a.text-success:focus {
   background-color: #f5f6f7;
 }
 
-.navbar .nav li.dropdown.open > .dropdown-toggle,
-.navbar .nav li.dropdown.active > .dropdown-toggle,
-.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
+.navbar-inverse .nav li.dropdown.active > .dropdown-toggle,
+.navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
   color: #ffffff;
   background: none;
 }
@@ -7564,25 +7564,25 @@ a.text-success:focus {
   border-radius: 2px;
 }
 
-.nav .dropdown:hover,
-.nav .dropdown:focus {
+.navbar-inverse .nav .dropdown:hover,
+.navbar-inverse .nav .dropdown:focus {
   background: #2a1d16;
 }
 
-.navbar .nav li.dropdown > a:hover .caret,
-.navbar .nav li.dropdown > a:focus .caret {
+.navbar-inverse .nav li.dropdown > a:hover .caret,
+.navbar-inverse .nav li.dropdown > a:focus .caret {
   border-top-color: #ffffff;
   border-bottom-color: #ffffff;
 }
 
-.navbar .nav li.dropdown > .dropdown-toggle .caret {
+.navbar-inverse .nav li.dropdown > .dropdown-toggle .caret {
   border-top-color: #ffffff;
   border-bottom-color: #ffffff;
 }
 
-.navbar .nav li.dropdown.open > .dropdown-toggle .caret,
-.navbar .nav li.dropdown.active > .dropdown-toggle .caret,
-.navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle .caret,
+.navbar-inverse .nav li.dropdown.active > .dropdown-toggle .caret,
+.navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle .caret {
   border-top-color: #ffffff;
   border-bottom-color: #ffffff;
 }
