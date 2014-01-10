@@ -473,6 +473,49 @@ fieldset[disabled] .btn-link:focus {
 
 /* //////////////// */
 
+.form-inverse {
+  .btn-default {
+    background: rgba(255,255,255,0.2);
+    border-color: @gray3;
+    color: @gray7;
+  }
+
+  .btn-default:hover,
+  .btn-default:focus,
+  .btn-default:active,
+  .btn-default.active,
+  .open .dropdown-toggle.btn-default {
+    background: rgba(255,255,255,0.3);
+    border-color: @gray4;
+  }
+
+  .btn-default:active,
+  .btn-default.active,
+  .open .dropdown-toggle.btn-default {
+    background: rgba(255,255,255,0.3);
+  }
+
+  .btn-default.disabled,
+  .btn-default[disabled],
+  fieldset[disabled] .btn-default,
+  .btn-default.disabled:hover,
+  .btn-default[disabled]:hover,
+  fieldset[disabled] .btn-default:hover,
+  .btn-default.disabled:focus,
+  .btn-default[disabled]:focus,
+  fieldset[disabled] .btn-default:focus,
+  .btn-default.disabled:active,
+  .btn-default[disabled]:active,
+  fieldset[disabled] .btn-default:active,
+  .btn-default.disabled.active,
+  .btn-default[disabled].active,
+  fieldset[disabled] .btn-default.active {
+    background: rgba(255,255,255,0.2);
+    border-color: @gray3;
+    color: @gray7;
+  }
+}
+
 .btn-icon-only {
   padding: 4px 6px;
   line-height: 10px;
