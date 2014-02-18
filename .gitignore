@@ -15,6 +15,9 @@ _site
 *.vi
 *~
 
+# Generated assets
+dist
+
 # OS or Editor folders
 .DS_Store
 ._*
