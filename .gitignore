@@ -17,6 +17,7 @@ _site
 
 # Generated assets
 dist
+docs/dist
 
 # OS or Editor folders
 .DS_Store
@@ -42,3 +43,4 @@ validation-report.json
 
 # Folders to ignore
 node_modules
+bower_components

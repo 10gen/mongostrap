@@ -1,0 +1,102 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+<title>
+  {% if page.title == "Bootstrap" %}
+    {{ page.title }}
+  {% else %}
+    {{ page.title }} &middot; Bootstrap
+  {% endif %}
+</title>
+
+<!-- Bootstrap core CSS -->
+<link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Documentation extras -->
+<link href="../assets/css/docs.min.css" rel="stylesheet">
+<!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+<!-- MongoDB Docs Styles Override -->
+<style type="text/css">
+  .bs-docs-home,
+  .bs-docs-header,
+  .bs-docs-masthead,
+  .bs-docs-masthead .lead {
+    background: #f5f6f7; /* @gray8 */
+    color: #4e3629; /* @brown2 */
+    text-shadow: none;
+  }
+  .bs-docs-header h1,
+  .bs-docs-masthead h1 {
+    color: #3b291f; /* @brown1 */
+    text-shadow: none;
+  }
+  .bs-docs-booticon {
+    color: #3b291f; /* @brown1 */
+  }
+  .bs-docs-booticon-outline {
+    border: 1px solid #3b291f; /* @brown1 */
+  }
+  .btn-outline-inverse {
+    color: #4e3629; /* @brown2 */
+    border-color: #95867f; /* @brown4 */
+  }
+  .btn-outline-inverse:hover,
+  .btn-outline-inverse:focus,
+  .btn-outline-inverse:active {
+    color: #f5f6f7; /* gray8 */
+    text-shadow: none;
+    background-color: #3b291f; /* brown1 */
+    border-color: #3b291f; /* brown1 */
+  }
+  .bs-docs-masthead .version {
+    color: #4e3629; /* @brown2 */
+  }
+
+  .bs-docs-sidenav {
+    background: #f5f6f7; /* @gray8 */
+  }
+  .bs-docs-sidebar .nav > li > a {
+    color: #6f6763; /* @subNavText */
+  }
+  .bs-docs-sidebar .nav > li > a:hover,
+  .bs-docs-sidebar .nav > li > a:focus {
+    background: #ebebed; /* @gray7 */
+    border-right: 1px solid #dee0e3; /* @gray6 */
+  }
+  .bs-docs-sidebar .nav > .active > a,
+  .bs-docs-sidebar .nav > .active:hover > a,
+  .bs-docs-sidebar .nav > .active:focus > a {
+    color: #6ba442; /* @green2 */
+    border-right: 1px solid #6ba442; /* @green2 */
+  }
+  .highlight {
+    background: #f5f6f7; /* @gray8 */
+    border: 1px solid #ebebed; /* @gray7 */
+  }
+</style>
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+                               <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-146052-10']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
