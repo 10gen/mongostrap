@@ -616,7 +616,7 @@ body {
   }
   .bs-docs-sidebar.affix {
     position: fixed; /* Undo the static from mobile first approach */
-    top: 70px; /* YM: Adjust for fixed bar at the top */;
+    top: 70px; /* YM: Adjust for fixed navbar */;
   }
   .bs-docs-sidebar.affix-bottom {
     position: absolute; /* Undo the static from mobile first approach */
