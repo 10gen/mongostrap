@@ -16,7 +16,6 @@ _site
 *~
 
 # Generated assets
-dist
 docs/dist
 
 # OS or Editor folders
