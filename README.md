@@ -1,3 +1,8 @@
+##Disclaimer
+Mongostrap is a themed skin of Bootstrap for MongoDB Applications. For unofficial projects, please include the following disclaimer
+
+>This is not an official MongoDB, Inc. project. As such, MongoDB, Inc. is not responsible for any of the content herein and any questions or concerns should be directed to the site's owner.
+
 # [Bootstrap](http://getbootstrap.com) [![Bower version](https://badge.fury.io/bo/bootstrap.png)](http://badge.fury.io/bo/bootstrap) [![Build Status](https://secure.travis-ci.org/twbs/bootstrap.png)](http://travis-ci.org/twbs/bootstrap) [![devDependency Status](https://david-dm.org/twbs/bootstrap/dev-status.png?theme=shields.io)](https://david-dm.org/twbs/bootstrap#info=devDependencies)
 [![Selenium Test Status](https://saucelabs.com/browser-matrix/bootstrap.svg)](https://saucelabs.com/u/bootstrap)
 
