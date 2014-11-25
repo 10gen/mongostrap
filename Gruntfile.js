@@ -162,7 +162,7 @@ module.exports = function (grunt) {
           sourceMapFilename: 'dist/css/<%= pkg.name %>.css.map'
         },
         files: {
-          'dist/css/<%= pkg.name %>.css': ['less/bootstrap.less', 'less/mongostrap.less']
+          'dist/css/<%= pkg.name %>.css': 'less/bootstrap.less'
         }
       },
       compileTheme: {
@@ -170,11 +170,11 @@ module.exports = function (grunt) {
           strictMath: true,
           sourceMap: true,
           outputSourceFiles: true,
-          sourceMapURL: '<%= pkg.name %>-theme.css.map',
-          sourceMapFilename: 'dist/css/<%= pkg.name %>-theme.css.map'
+          sourceMapURL: '<%= pkg.themeName %>-theme.css.map',
+          sourceMapFilename: 'dist/css/<%= pkg.themeName %>-theme.css.map'
         },
         files: {
-          'dist/css/<%= pkg.name %>-theme.css': 'less/theme.less'
+          'dist/css/<%= pkg.themeName %>-theme.css': 'less/mongostrap.less' // use mongostrap as the "theme"
         }
       },
       minify: {
@@ -184,7 +184,7 @@ module.exports = function (grunt) {
         },
         files: {
           'dist/css/<%= pkg.name %>.min.css': 'dist/css/<%= pkg.name %>.css',
-          'dist/css/<%= pkg.name %>-theme.min.css': 'dist/css/<%= pkg.name %>-theme.css'
+          'dist/css/<%= pkg.themeName %>-theme.min.css': 'dist/css/<%= pkg.themeName %>-theme.css'
         }
       }
     },
