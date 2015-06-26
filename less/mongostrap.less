@@ -38,129 +38,168 @@
 /* Other Colors */
 @red: #ed271c;
 @lightRed: #ffeaea;
-@yellow: #ffb618;
+@yellow: @alertOrange;
 @pw: #fff;
-@cautionOrange: #ffbc91;
+@cautionOrange: @alertOrange;
 @errorBackground: #fdd0d1;
 
 /* Text Colors */
 /* default text color is @gray1 */
 @linkText: #006cbc;
+@linkOnDark: #2898dd;
 @warningText: #ffb618;
 @successText: #6ca439;
 @errorText: #ed271c;
 @mutedText: @gray4;
-@veryMutedText: #b6b3b2;
+@veryMutedText: @gray5;
 @subNavText: #6f6763;
+
+/*Chart Colors*/
+@chart0: #F68A1E;
+@chart1: #43B1E5;
+@chart2: #F38183;
+@chart3: #26A348;
+@chart4: #FBB129;
+@chart5: #92A83B;
+@chart6: #46929A;
+@chart7: #D381B3;
+@chart8: #85CA98;
+
+@chartAverage: #d29e29;
+@chartTotal: #6ba442;
+
+@chartRestart: #ef4c65;
+@chartBecamePrimary: #fbb129;
+@chartBecameSecondary: #7f6a4e;
+
+/* Alert Colors */
+@alertOrange: #fbb129;
+@alertOrangeBg: #FFFBF5;
+@alertOrangeBorder: #FEE9C3;
+@alertRed: #ef4c4c;
+@alertRedBg: #FFF6F6;
+@alertRedBorder: #FBCCCC;
+@alertBlue: #43b1e5;
+@alertBlueBg: #D9EDF7;
+@alertBlueBorder: #B4DFF3;
+@alertGreen: @green2;
+@alertGreenBg: #F8FBF6;
+@alertGreenBorder: #D5E6C9;
+
+/* Semantic Colors */
+
+@inactiveIcon: @gray4;
 
 /* Fonts! */
 //Reg
 @font-face {
-  font-family: 'Akzidenz';
-  src: url('/static/font/akzidgrostdreg.eot');
-  src: url('/static/font/akzidgrostdreg.eot?#iefix') format('embedded-opentype'),
-       url('/static/font/akzidgrostdreg.woff') format('woff'),
-       url('/static/font/akzidgrostdreg.ttf')  format('truetype');
-  font-style: normal;
-  font-weight: normal;
+    font-family: 'Akzidenz';
+    src: url('/static/font/akzidgrostdreg.eot');
+    src: url('/static/font/akzidgrostdreg.eot#iefix') format('embedded-opentype'),
+    url('/static/font/akzidgrostdreg.woff') format('woff'),
+    url('/static/font/akzidgrostdreg.ttf')  format('truetype');
+    font-style: normal;
+    font-weight: normal;
 }
-  //Reg Italic
-  @font-face {
+//Reg Italic
+@font-face {
     font-family: 'Akzidenz';
     src: url('/static/font/akzidgrostdita.eot');
-    src: url('/static/font/akzidgrostdita.eot?#iefix') format('embedded-opentype'),
-         url('/static/font/akzidgrostdita.woff') format('woff'),
-         url('/static/font/akzidgrostdita.ttf')  format('truetype');
+    src: url('/static/font/akzidgrostdita.eot#iefix') format('embedded-opentype'),
+    url('/static/font/akzidgrostdita.woff') format('woff'),
+    url('/static/font/akzidgrostdita.ttf')  format('truetype');
     font-style: italic;
     font-weight: normal;
-  }
-    //Bold
-    @font-face {
-      font-family: 'Akzidenz';
-      src: url('/static/font/akzidgrostdmed.eot');
-      src: url('/static/font/akzidgrostdmed.eot?#iefix') format('embedded-opentype'),
-           url('/static/font/akzidgrostdmed.woff') format('woff'),
-           url('/static/font/akzidgrostdmed.ttf')  format('truetype');
-      font-style: normal;
-      font-weight: bold;
-    }
-      //Bold Italic
-      @font-face {
-        font-family: 'Akzidenz';
-        src: url('/static/font/akzidgrostdmedita.eot');
-        src: url('/static/font/akzidgrostdmedita.eot?#iefix') format('embedded-opentype'),
-             url('/static/font/akzidgrostdmedita.woff') format('woff'),
-             url('/static/font/akzidgrostdmedita.ttf')  format('truetype');
-        font-style: italic;
-        font-weight: bold;
-      }
-    //Light
-    @font-face {
-      font-family: 'Akzidenz';
-      src: url('/static/font/akzidgrostdlig.eot');
-      src: url('/static/font/akzidgrostdlig.eot?#iefix') format('embedded-opentype'),
-           url('/static/font/akzidgrostdlig.woff') format('woff'),
-           url('/static/font/akzidgrostdlig.ttf')  format('truetype');
-      font-style: normal;
-      font-weight: 200;
-    }
-      //Light Italic
-      @font-face {
-        font-family: 'Akzidenz';
-        src: url('/static/font/akzidgrostdligita.eot');
-        src: url('/static/font/akzidgrostdligita.eot?#iefix') format('embedded-opentype'),
-             url('/static/font/akzidgrostdligita.woff') format('woff'),
-             url('/static/font/akzidgrostdligita.ttf')  format('truetype');
-        font-style: italic;
-        font-weight: 200;
-      }
+}
+//Bold
+@font-face {
+    font-family: 'Akzidenz';
+    src: url('/static/font/akzidgrostdmed.eot');
+    src: url('/static/font/akzidgrostdmed.eot#iefix') format('embedded-opentype'),
+    url('/static/font/akzidgrostdmed.woff') format('woff'),
+    url('/static/font/akzidgrostdmed.ttf')  format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+//Bold Italic
+@font-face {
+    font-family: 'Akzidenz';
+    src: url('/static/font/akzidgrostdmedita.eot');
+    src: url('/static/font/akzidgrostdmedita.eot#iefix') format('embedded-opentype'),
+    url('/static/font/akzidgrostdmedita.woff') format('woff'),
+    url('/static/font/akzidgrostdmedita.ttf')  format('truetype');
+    font-style: italic;
+    font-weight: bold;
+}
+//Light
+@font-face {
+    font-family: 'Akzidenz';
+    src: url('/static/font/akzidgrostdlig.eot');
+    src: url('/static/font/akzidgrostdlig.eot#iefix') format('embedded-opentype'),
+    url('/static/font/akzidgrostdlig.woff') format('woff'),
+    url('/static/font/akzidgrostdlig.ttf')  format('truetype');
+    font-style: normal;
+    font-weight: 200;
+}
+//Light Italic
+@font-face {
+    font-family: 'Akzidenz';
+    src: url('/static/font/akzidgrostdligita.eot');
+    src: url('/static/font/akzidgrostdligita.eot#iefix') format('embedded-opentype'),
+    url('/static/font/akzidgrostdligita.woff') format('woff'),
+    url('/static/font/akzidgrostdligita.ttf')  format('truetype');
+    font-style: italic;
+    font-weight: 200;
+}
 //Condensed weights and styles
 @font-face {
-  font-family: 'Akzidenz Cnd';
-  src: url('/static/font/akzidgrostdligcnd.eot');
-  src: url('/static/font/akzidgrostdligcnd.eot?#iefix') format('embedded-opentype'),
-       url('/static/font/akzidgrostdligcnd.woff') format('woff'),
-       url('/static/font/akzidgrostdligcnd.ttf')  format('truetype');
-  font-style: normal;
-  font-weight: 200;
+    font-family: 'Akzidenz Cnd';
+    src: url('/static/font/akzidgrostdligcnd.eot');
+    src: url('/static/font/akzidgrostdligcnd.eot#iefix') format('embedded-opentype'),
+    url('/static/font/akzidgrostdligcnd.woff') format('woff'),
+    url('/static/font/akzidgrostdligcnd.ttf')  format('truetype');
+    font-style: normal;
+    font-weight: 200;
 }
 
 @font-face {
-  font-family: 'MMS Icons';
-  font-style: normal;
-  font-weight: normal;
-  src: url('/static/font/MMSIcons-Regular.eot'); /* IE9 Compat Modes */
-  src: url('/static/font/MMSIcons-Regular.eot?#iefix') format('embedded-opentype'),
-       url('/static/font/MMSIcons-Regular.woff') format('woff'),
-       url('/static/font/MMSIcons-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-family: 'MMS Icons';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/static/font/MMSIcons-Regular.eot'); /* IE9 Compat Modes */
+    src: url('/static/font/MMSIcons-Regular.eot#iefix') format('embedded-opentype'),
+    url('/static/font/MMSIcons-Regular.woff') format('woff'),
+    url('/static/font/MMSIcons-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-  font-family: 'MMS Icons';
-  src: url('/static/font/MMSIcons-Regular.svg') format('svg');
+    @font-face {
+        font-family: 'MMS Icons';
+        src: url('/static/font/MMSIcons-Regular.svg') format('svg');
 
-  }
+    }
 }
 //only used in Classic
 @font-face {
-  font-family: 'MMS Illustrations';
-  font-style: normal;
-  font-weight: normal;
-  src: url('/static/font/MMSIllustrations-Regular.eot');
-  src: url('/static/font/MMSIllustrations-Regular.eot?#iefix') format('embedded-opentype'),
-       url('/static/font/MMSIllustrations-Regular.woff') format('woff'),
-       url('/static/font/MMSIllustrations-Regular.ttf')  format('truetype');
+    font-family: 'MMS Illustrations';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/static/font/MMSIllustrations-Regular.eot');
+    src: url('/static/font/MMSIllustrations-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/static/font/MMSIllustrations-Regular.woff') format('woff'),
+    url('/static/font/MMSIllustrations-Regular.ttf')  format('truetype');
 }
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-  font-family: 'MMS Illustrations';
-  src: url('/static/font/MMSIllustrations-Regular.svg') format('svg');
-  }
+    @font-face {
+        font-family: 'MMS Illustrations';
+        src: url('/static/font/MMSIllustrations-Regular.svg') format('svg');
+    }
 }
+
 html, body {
   height: 100%;
   font-family: "Akzidenz", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: @gray1;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -179,7 +218,7 @@ h6,
   line-height: 1.4;
 }
 
-* { outline: none; -webkit-font-smoothing: antialiased; }
+* { outline: none; }
 
 a, a:hover, a:focus {
   color: @linkText;
@@ -286,8 +325,8 @@ a.no-underline:hover {
   -webkit-transition: all 120ms ease;
      -moz-transition: all 120ms ease;
           transition: all 120ms ease;
-  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .btn-lg { padding: 10px 16px 9px; }
@@ -330,8 +369,6 @@ a.no-underline:hover {
   background: rgba(255,255,255,0.5);
   border-color: @gray6;
   color: @gray1;
-  -webkit-box-shadow: none;
-  box-shadow: none;
 }
 
 .btn-default:hover,
@@ -519,7 +556,11 @@ fieldset[disabled] .btn-danger.active {
   border-color: @green3;
   border-width: 2px;
   box-shadow: none;
+  padding: 5px 11px 4px;
 }
+.btn-lg.btn-info { padding: 9px 15px 8px; }
+.btn-sm.btn-info { padding: 4px 9px; }
+.btn-xs.btn-info { padding: 1px 7px; }
 
 .btn-info:hover,
 .btn-info:focus,
@@ -592,9 +633,21 @@ fieldset[disabled] .btn-link:focus {
   color: @mutedText;
 }
 
+/* Button Badges */
+.btn-xs .badge, .btn-group-xs .btn .badge {
+  font-size: 10px;
+  padding: 2px 5px 3px 5px;
+
+  &.badge-danger {
+    // background: @errorText;
+    background: darken(@alertRed, 25%);
+    margin-left: 2px;
+  }
+}
+
 /* //////////////// */
 
-.form-inverse {
+[class*="-inverse"] {
   .btn-default {
     background: rgba(255,255,255,0.2);
     border-color: @gray3;
@@ -634,6 +687,73 @@ fieldset[disabled] .btn-link:focus {
     background: rgba(255,255,255,0.2);
     border-color: @gray3;
     color: @gray7;
+  }
+
+  .btn-link,
+  .btn-link:hover {
+    color: @linkOnDark;
+  }
+
+  .btn-info {
+    color: @green3;
+  }
+
+  .btn-info:hover,
+  .btn-info:focus,
+  .btn-info:active,
+  .btn-info.active,
+  .open .dropdown-toggle.btn-info {
+    color: @green4;
+    background-color: transparent;
+    border-color: @green4;
+  }
+
+  // debated removing border from solid color buttons on dark backgrounds, left out for now - mg
+  // .btn-primary,
+  // .btn-warning,
+  // .btn-danger {
+  //   border: none;
+  //   padding: 7px 13px 6px;
+  // }
+
+  .alert {
+    background: transparent;
+  }
+  .alert-success {
+    border-color: @green2;
+    color: @green3;
+
+    a {
+      color: @green3;
+    }
+  }
+  .alert-warning {
+    border-color: @alertOrange;
+    color: @alertOrange;
+
+    a {
+      color: @alertOrange;
+    }
+  }
+  .alert-danger {
+    border-color: @alertRed;
+    color: lighten(@alertRed, 8%);
+
+    a {
+      color: lighten(@alertRed, 8%);
+    }
+  }
+  .alert-info {
+    border-color: @alertBlue;
+    color: @alertBlue;
+
+    a {
+      color: @alertBlue;
+    }
+  }
+
+  .progress-bar-micro {
+      background: @gray0;
   }
 }
 
@@ -697,6 +817,17 @@ fieldset[disabled] .btn-link:focus {
           box-shadow: none;
 }
 
+.progress-inline {
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-bottom: 0;
+}
+
+.progress-inline .progress-bar {
+  display: inline-block;
+}
+
 .progress .bar {
   height: 100%;
   background: @purple1;
@@ -720,6 +851,19 @@ fieldset[disabled] .btn-link:focus {
 }
 .progress-bar-info {
   background-color: @gray4;
+}
+
+.progress-bar-micro {
+    height: 2px;
+    margin-bottom: 0px;
+    > .progress-bar {
+        background-color: @green3
+    }
+
+    &.active > .progress-bar {
+        // for indeterminate style
+        background-color: @green3;
+    }
 }
 .input-prepend .add-on:first-child,
 .input-prepend .btn:first-child {
@@ -829,9 +973,11 @@ fieldset[disabled] .btn-link:focus {
     background: @gray3;
     color: @gray0;
     border-color: @gray0;
+
     &:hover {
       background: @gray1;
       color: @gray5;
+      border-color: @gray0;
     }
     &.active {
       background: @gray0;
@@ -841,8 +987,7 @@ fieldset[disabled] .btn-link:focus {
   }
 }
 
-.table-hover tbody tr:hover > td,
-.table-hover tbody tr:hover > th {
+.table-hover tbody tr:hover {
   background-color: @gray8;
 }
 
@@ -866,7 +1011,8 @@ fieldset[disabled] .btn-link:focus {
 .table.table-new {
   font-size: 14px;
 
-  thead tr {
+  thead tr,
+  tfoot tr {
     background: transparent;
 
     th {
@@ -886,7 +1032,7 @@ fieldset[disabled] .btn-link:focus {
         border-right: 1px solid @gray7;
         height: 20px;
       }
-      &:last-child:after {
+      &:last-child:after, &.hide-border:after {
         display: none;
       }
     }
@@ -906,6 +1052,11 @@ fieldset[disabled] .btn-link:focus {
 .tooltip-inner table,
 .tooltip-inner table td {
   background: none !important;
+}
+
+.tooltip-extra a,
+.tooltip-tour-banner a {
+  cursor: pointer;
 }
 
 .nav-tabs {
@@ -977,7 +1128,16 @@ fieldset[disabled] .btn-link:focus {
 .navbar-alert.alert {
   padding: 8px 15px;
   margin-bottom: 0;
-  border-radius: 0;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+
+  i[class^="icon-"] {
+    margin-right: 0.5ex;
+  }
+}
+
+.hosts-alert.alert {
   i[class^="icon-"] {
     margin-right: 0.5ex;
   }
@@ -993,11 +1153,58 @@ fieldset[disabled] .btn-link:focus {
     background: none;
     border-color: #31708F;
     color: #31708f;
+
     &:hover {
       background-color: @pw;
     }
   }
 }
+
+.alert {
+  border-radius: 0;
+  border-width: 1px;
+
+  a {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+.alert-component(@color, @border, @bg) {
+  color: darken(@color, 25%);
+  border-color: @border;
+  background: @bg;
+
+  a {
+    color: darken(@color, 25%);
+  }
+}
+
+.alert-success {
+  .alert-component(@alertGreen, @alertGreenBorder, @alertGreenBg);
+}
+aside .alert-success {
+  .alert-component(@alertGreen, @alertGreenBorder, fade(@alertGreen, 5%));
+}
+.alert-warning {
+  .alert-component(@alertOrange, @alertOrangeBorder, @alertOrangeBg);
+}
+aside .alert-warning {
+  .alert-component(@alertOrange, @alertOrangeBorder, fade(@alertOrange, 5%));
+}
+.alert-danger {
+  .alert-component(@alertRed, @alertRedBorder, @alertRedBg);
+}
+aside .alert-danger {
+  .alert-component(@alertRed, @alertRedBorder, fade(@alertRed, 5%));
+}
+.alert-info {
+  .alert-component(@alertBlue, @alertBlueBorder, @alertBlueBg);
+}
+aside .alert-info {
+  .alert-component(@alertBlue, @alertBlueBorder, fade(@alertBlue, 5%));
+}
+
 
 .dropdown-menu > li > a,
 .dropdown-menu > li.dropdown-header {
@@ -1109,6 +1316,15 @@ fieldset[disabled] .btn-link:focus {
     border: none;
     background-color: darken(@gray2, 6%);
   }
+
+  select {
+    -webkit-appearance: none;
+    -webkit-padding-end: 30px;
+    background-image: url('/static/images/icon-select-down-arrow-dark.png');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 26px 11px;
+  }
 }
 
 .form-control.white-bg {
@@ -1181,7 +1397,7 @@ ol.breadcrumb li {
 }
 
 .host-label-mongos,
-.host-label-conf {
+.host-label-configsvr {
   background: desaturate(lighten(@green2, 35%), 10%);
 }
 
@@ -1315,16 +1531,19 @@ h4.modal-title {
 }
 
 .popover {
-  border: 1px solid @gray6;
+  border: 1px solid @gray5;
   padding: 0;
   border-radius: 0;
   -webkit-box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.05);
      -moz-box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.05);
           box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.05);
+  .arrow {
+
+  }
 }
 
 .popover-title {
-  font-weight: 200;
+  font-weight: normal;
   border-bottom: 1px solid @gray7;
   border-radius: 0;
   text-transform: capitalize;
@@ -1364,8 +1583,19 @@ h4.modal-title {
 .tooltip-inner {
   text-align: left;
   border-radius: 0;
-  white-space: pre-wrap;
   max-width: 400px;
+}
+
+.tooltip-extra {
+  background-color: black;
+  text-align: left;
+  border-radius: 0;
+  max-width: 400px;
+  padding: 8px 8px;
+  a {
+    color: white;
+    text-decoration: underline;
+  }
 }
 
 /* Bootstrap Docs Components CSS */
@@ -1388,9 +1618,18 @@ h4.modal-title {
   background-color: #fff;
   border-radius: 3px;
 }
+
 .bs-callout-code {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 85%;
+}
+
+.bs-callout-code > pre {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
 }
 
 .bs-callout-danger {
